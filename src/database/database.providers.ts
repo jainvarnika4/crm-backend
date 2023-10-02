@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import { Cat } from 'src/modules/cats-module/cats.entity';
-const Models: any = [Cat];
+import { Users } from 'src/modules/users/users.entity';
+const Models: any = [Cat, Users];
 
 export const databaseProviders = [
   {
