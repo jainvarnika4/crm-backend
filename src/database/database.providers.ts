@@ -6,13 +6,21 @@ export const databaseProviders = [
   {
     provide: 'SEQUELIZE',
     useFactory: async () => {
+      // const sequelize = new Sequelize({
+      //   dialect: 'postgres',
+      //   host: 'localhost',
+      //   port: 5432,
+      //   username: 'postgres',
+      //   password: 'vardhan2000',
+      //   database: 'contactsDb',
+      // });
       const sequelize = new Sequelize({
-        dialect: 'postgres',
+        dialect: 'mysql',
         host: 'localhost',
-        port: 5432,
-        username: 'postgres',
-        password: 'vardhan2000',
-        database: 'contactsDb',
+        port: 3306,
+        username: 'root',
+        password: 'varni04',
+        database: 'CRM',
       });
 
       sequelize.addModels(Models);
